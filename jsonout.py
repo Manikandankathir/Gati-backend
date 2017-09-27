@@ -4,7 +4,7 @@ import requests
 from collections import OrderedDict 
 
 r = requests.get('http://www.gatikwe.com/webservices/GatiKWEDktTrack.jsp?p1=169280845&p2=EE19F2E45374D26A')
-
+print "hello"
 data = xmltodict.parse(r.text)
 length = (len(data['Gatiresponse']['dktinfo']['TRANSIT_DTLS']['ROW']))
 jsondata=OrderedDict()
